@@ -14,6 +14,9 @@ class DisasterAdapter(private val listDisaster: List<Disaster>) :
             with(binding) {
                 txtDisasterName.text = data.nameDisaster
                 txtDisasterType.text = data.disasterType
+                if (data.image != 0){
+                    imgDisaster.setImageResource(data.image)
+                }
             }
         }
     }
